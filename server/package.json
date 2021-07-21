@@ -1,0 +1,20 @@
+{
+  "name": "terraform-aws",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/m-yasir/terraform-aws-react-nodejs",
+  "author": "Yasir Nadeem",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.5"
+  }
+}

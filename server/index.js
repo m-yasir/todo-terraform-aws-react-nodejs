@@ -1,20 +1,33 @@
 const app = require("express")();
 const bodyParser = require("body-parser");
 
+// Routers
+const todo = require("./routes/todo");
+const user = require("./routes/user");
+
 // Environment Vars
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 8000;
+
+app.disable("x-powered-by");
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Parse Request Body (JSON)
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-    res.status(200);
-    res.send("Express App");
-})
+// Routes
+app.use('/todo', todo);
+app.use('/user', user);
+
+// Wildcard - For Invalid Routes
+app.get("*", (req, res) => {
+	res.status(404);
+	res.send("");
+});
+
+// Listener
 
 app.listen(PORT, () => {
-    console.log("Listening on PORT: " + PORT);
+	console.log("Listening on PORT: " + PORT);
 });

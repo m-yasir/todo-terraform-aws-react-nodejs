@@ -17,6 +17,8 @@
 ### Future
 
 - Dockerize the application
+- Add User support to the App.
+- Add Sync system to the App to avoid server overload.
 
 ---
 

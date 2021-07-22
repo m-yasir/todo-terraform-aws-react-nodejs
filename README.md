@@ -1,6 +1,6 @@
 # [WIP] Terraform AWS Example
 
-Things to do:
+:white_check_mark: Things to do:
 
 ### Application
 - Create a ReactJS App that interacts with the server.

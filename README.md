@@ -2,11 +2,13 @@
 
 ## :white_check_mark: Things to do
 
+![Client App](https://i.imgur.com/O0RmmUb.png)
+
 ### Application
 
-- Create a ReactJS App that interacts with the server.
-- Create an Express App that stores data in a Relational Database (RDS) like SQL.
-- Write script to build app and configure stuff (like docker if needed).
+- :white_check_mark: Create a ReactJS App that interacts with the server.
+- :white_check_mark: Create an Express App that stores data in a Relational Database (RDS) like SQL.
+- Write script to build app and configure stuff (if needed).
 
 ### Terraform
 

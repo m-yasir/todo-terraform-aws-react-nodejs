@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
 	Todo.init(
 		{
 			id: {
+				autoIncrement: true,
 				primaryKey: true,
 				type: DataTypes.INTEGER
 			},

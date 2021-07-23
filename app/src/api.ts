@@ -1,20 +1,26 @@
-import { Task } from "./types";
+import { _fetch } from "./helper";
+import { Task, TaskPayload } from "./types";
 
+// API UTIL
+function getAPIUrl(resource: string) {
+	return process.env.REACT_APP_API_URL + resource;
+}
+
+// TODO: For Scalability, when user support is added, move entity endpoints to their respective folders.
 async function getTasks(): Promise<Task[]> {
-	return Promise.resolve([
-		{ id: 1, content: "First", completed: false, createdAt: new Date() },
-		{ id: 2, content: "Second", completed: false, createdAt: new Date() },
-		{ id: 3, content: "Third", completed: false, createdAt: new Date() },
-		{ id: 4, content: "Fourth", completed: false, createdAt: new Date() },
-	]);
+	return _fetch<Task[]>(getAPIUrl("/todo"));
+}
+
+async function createTask(task: TaskPayload): Promise<Task> {
+	return _fetch<Task>(getAPIUrl("/todo"), "POST", task);
 }
 
 async function updateTask(task: Task): Promise<Task> {
-	return Promise.resolve(task);
+	return _fetch<Task>(`${getAPIUrl("/todo")}/${task.id}`, "PATCH", task);
 }
 
-async function removeTask(taskId: number): Promise<void> {
-	return Promise.resolve();
+async function removeTask(id: number): Promise<void> {
+	return _fetch(`${getAPIUrl("/todo")}/${id}`, "DELETE");
 }
 
-export { getTasks, updateTask, removeTask };
+export { createTask, getTasks, removeTask, updateTask };

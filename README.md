@@ -14,7 +14,7 @@
 - Deploy ReactJS app (build) on S3 instance.
 - Deploy Express server on an EC2 instance.
 
-### Future
+### Future Tasks
 
 - Dockerize the application
 - Add User support to the App.

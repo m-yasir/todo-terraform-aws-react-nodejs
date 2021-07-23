@@ -1,5 +1,16 @@
 # Getting Started with Create React App
 
+## Things to Note
+
+- The folder structure can be improved if more features are added.
+- Currently it is just a todo list with no user or sync support, so it is kept simple for simplicity sake.
+- Components in App folder will be separated for cleaner and maintainable code.
+
+## Future Work
+
+- Sync todo instead of updating manually.
+- \*Highlight todo that are to be synced.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -44,3 +55,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+---
+
+### Notes
+
+\* -> Feature not confirmed

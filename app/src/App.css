@@ -1,0 +1,7 @@
+.icon-button {
+    border: none;
+}
+
+.icon-button:hover {
+    border: none !important;
+}

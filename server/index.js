@@ -23,15 +23,6 @@ app.use(cors({
   "optionsSuccessStatus": 204
 }));
 
-// Enable cors for S3 (cross origin) access in an EC2 instance
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", "*");
-//   res.setHeader("Access-Control-Allow-Credentials", "true");
-//   res.setHeader("Access-Control-Allow-Methods", 'DELETE, GET, HEAD,,PATCH, POST, PUT, UPDATE');
-//   res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
-//   next()
-// });
-
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 

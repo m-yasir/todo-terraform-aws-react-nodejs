@@ -1,0 +1,7 @@
+access_key  = ""
+ami_id      = ""
+bucket      = ""
+region      = ""
+secret_key  = ""
+dbUsername  = ""
+dbPassword  = ""

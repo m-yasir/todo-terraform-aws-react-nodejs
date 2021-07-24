@@ -17,10 +17,16 @@ app.disable("x-powered-by");
 
 // Enable cors for S3 (cross origin) access in an EC2 instance
 app.use(cors({
-  "origin": "*",
   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-  "preflightContinue": true,
-  "optionsSuccessStatus": 204
+  origin: (origin, cb) => cb(null, true),
+    credentials: true,
+    preflightContinue: true,
+    exposedHeaders: [
+      "Access-Control-Allow-Headers",
+      "Access-Control-Allow-Origin, Origin, Content-Type, Accept",
+      "X-Password-Expired"
+    ],
+    optionsSuccessStatus: 204
 }));
 
 // parse application/x-www-form-urlencoded

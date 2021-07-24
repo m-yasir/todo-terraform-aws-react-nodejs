@@ -8,20 +8,22 @@
 
 - :white_check_mark: Create a ReactJS App that interacts with the server.
 - :white_check_mark: Create an Express App that stores data in a Relational Database (RDS) like SQL.
-- Write script to build app and configure stuff (if needed).
 
 ### Terraform
 
-- Configure VPC with appropriate subnets.
-- Deploy ReactJS app (build) on S3 instance.
-- Deploy Express server on an EC2 instance.
+- :white_check_mark: Configure VPC with appropriate subnets.
+- :white_check_mark: Deploy ReactJS app (build) on the created S3 instance.
+- :white_check_mark: Deploy Express server on an EC2 instance.
 
-### Future Tasks
+### Further Tasks
 
-- Dockerize the application
+- Write scripts to build app, add to environment variable and configure stuff (if needed).
+- Dockerize the application and deploy with terraform
 - Add User support to the App.
 - Add Sync system to the App to avoid server overload.
 
 ---
 
-Note: Pull requests are always welcome!
+Note: The default database username and password are currently exposed for the sake of simplicity.
+
+Also, Pull requests are always welcome!

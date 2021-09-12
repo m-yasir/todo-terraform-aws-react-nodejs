@@ -31,3 +31,7 @@ export async function _fetch<T>(
 		}
 	});
 }
+
+export function isError (error: any): error is Error {
+	return error.message !== undefined;
+}
